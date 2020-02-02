@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Toqeer Iqbal`,
+    description: `I am Toqeer, MERN Stack Developer from Pakistan. Currently Working with Two Big Travel Brands TheBrokeBackPacker & OneWeirdGlobe. I have over 4 years of experience in Web Development.`,
+    author: `@toqeer`,
   },
   plugins: [
+    "gatsby-plugin-antd",
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
