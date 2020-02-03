@@ -3,6 +3,7 @@ module.exports = {
     title: `Toqeer Iqbal`,
     description: `I am Toqeer, MERN Stack Developer from Pakistan. Currently Working with Two Big Travel Brands TheBrokeBackPacker & OneWeirdGlobe. I have over 4 years of experience in Web Development.`,
     author: `@toqeer`,
+    siteUrl: "https://toqeeriqbal.com/",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
