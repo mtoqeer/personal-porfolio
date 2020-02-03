@@ -8,11 +8,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Header from "./header"
 import "./layout.css"
 import "antd/dist/antd.min.css"
+import { Layout, Menu, Breadcrumb } from "antd"
+const { Header, Content, Footer } = Layout
 
-const Layout = ({ children }) => {
+const MainLayout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,23 +25,30 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Developed & Desinged By
-          {` `}
-          <a href="https://toqeeriqbal.com">Toqeer Iqbal</a>
-        </footer>
-      </div>
-    </>
+    <Layout className="layout">
+      <Header>
+        <div className="logo" />
+        <Menu
+          theme="dark"
+          mode="horizontal"
+          defaultSelectedKeys={["2"]}
+          style={{ lineHeight: "64px" }}
+        >
+          <Menu.Item key="1">Home</Menu.Item>
+        </Menu>
+      </Header>
+
+      <Content style={{ padding: "0 50px" }}>
+        <div style={{ background: "#fff", padding: 24, minHeight: 280 }}>
+          {children}
+        </div>
+      </Content>
+
+      <Footer style={{ textAlign: "center" }}>
+        Developed & Desinged By{" "}
+        <a href="https://toqeeriqbal.com">Toqeer Iqbal</a>{" "}
+      </Footer>
+    </Layout>
   )
 }
 
@@ -48,4 +56,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default MainLayout

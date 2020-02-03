@@ -1,13 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
+import MainLayout from "../components/layout"
 import SEO from "../components/seo"
 import { Button } from "antd"
 
 const IndexPage = () => (
-  <Layout>
+  <MainLayout>
     <SEO title="Home" />
     <h1>Hi people</h1>
     <p>Something is great coming soon...</p>
@@ -22,7 +21,7 @@ const IndexPage = () => (
     </Button>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}></div>
     {/* <Link to="/page-2/">Go to page 2</Link> */}
-  </Layout>
+  </MainLayout>
 )
 
 export default IndexPage
