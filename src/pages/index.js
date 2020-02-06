@@ -14,7 +14,7 @@ const IndexPage = () => (
       type="primary"
       href="https://www.upwork.com/freelancers/~01b3de937e37eb5fce"
       target="_blank"
-      rel="nofollow"
+      rel="nofollow noreferrer"
     >
       Hire Me
     </Button>
