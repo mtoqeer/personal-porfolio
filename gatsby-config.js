@@ -1,9 +1,14 @@
+const urljoin = require("url-join")
+const path = require("path")
+const config = require("./data/SiteConfig")
+
 module.exports = {
+  pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
   siteMetadata: {
-    title: `Toqeer Iqbal`,
-    description: `I am Toqeer, MERN Stack Developer from Pakistan. Currently Working with Two Big Travel Brands TheBrokeBackPacker & OneWeirdGlobe. I have over 4 years of experience in Web Development.`,
-    author: `@toqeer`,
-    siteUrl: "https://toqeeriqbal.com/",
+    title: urljoin(config.siteUrl, config.pathPrefix),
+    description: config.siteDescription,
+    author: config.author,
+    siteUrl: urljoin(config.siteUrl, config.pathPrefix),
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,11 +24,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        name: config.siteTitle,
+        short_name: config.siteTitleShort,
+        start_url: config.pathPrefix,
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
