@@ -5,7 +5,7 @@ const config = require("./data/SiteConfig")
 module.exports = {
   pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
   siteMetadata: {
-    title: urljoin(config.siteUrl, config.pathPrefix),
+    title: config.siteTitle,
     description: config.siteDescription,
     author: config.author,
     siteUrl: urljoin(config.siteUrl, config.pathPrefix),
