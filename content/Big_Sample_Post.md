@@ -1,16 +1,14 @@
 ---
-title: "Big Test"
-cover: "5.jpg"
-category: "moar"
-date: "2018-03-01"
-slug: "Big-Sample_Test"
+title: Test Post Change
+date: '2018-03-01'
+cover: 5.jpg
+slug: Big-Sample_Test
+category: moar
 tags:
-    - test
-    - huge
+  - test
+  - huge
 ---
-
 # NOTE: This "post" is based on [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and is meant to test styling of Markdown generated documents.
-
 
 This is intended as a quick reference and showcase. For more complete info, see [John Gruber's original spec](http://daringfireball.net/projects/markdown/) and the [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).
 
@@ -22,18 +20,7 @@ You can play around with Markdown on our [live demo page](http://www.markdown-he
 
 ##### Table of Contents
 
-[Headers](#headers)
-[Emphasis](#emphasis)
-[Lists](#lists)
-[Links](#links)
-[Images](#images)
-[Code and Syntax Highlighting](#code)
-[Tables](#tables)
-[Blockquotes](#blockquotes)
-[Inline HTML](#html)
-[Horizontal Rule](#hr)
-[Line Breaks](#lines)
-[YouTube Videos](#videos)
+[Headers](#headers) [Emphasis](#emphasis) [Lists](#lists) [Links](#links) [Images](#images) [Code and Syntax Highlighting](#code) [Tables](#tables) [Blockquotes](#blockquotes) [Inline HTML](#html) [Horizontal Rule](#hr) [Line Breaks](#lines) [YouTube Videos](#videos)
 
 <a name="headers"/>
 
@@ -57,19 +44,22 @@ Alt-H2
 ```
 
 # H1
+
 ## H2
+
 ### H3
+
 #### H4
+
 ##### H5
+
 ###### H6
 
 Alternatively, for H1 and H2, an underline-ish style:
 
-Alt-H1
-======
+# Alt-H1
 
-Alt-H2
-------
+## Alt-H2
 
 <a name="emphasis"/>
 
@@ -85,14 +75,13 @@ Combined emphasis with **asterisks and _underscores_**.
 Strikethrough uses two tildes. ~~Scratch this.~~
 ```
 
-Emphasis, aka italics, with *asterisks* or _underscores_.
+Emphasis, aka italics, with *asterisks* or *underscores*.
 
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
+Strong emphasis, aka bold, with **asterisks** or **underscores**.
 
-Combined emphasis with **asterisks and _underscores_**.
+Combined emphasis with **asterisks and *underscores***.
 
 Strikethrough uses two tildes. ~~Scratch this.~~
-
 
 <a name="lists"/>
 
@@ -117,18 +106,16 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 2. Another item
 
    * Unordered sub-list.
-
-1. Actual numbers don't matter, just that it's a number
+3. Actual numbers don't matter, just that it's a number
 
    1. Ordered sub-list
-
 4. And another item.
 
    Some text that should be aligned with the above item.
 
 * Unordered list can use asterisks
-- Or minuses
-+ Or pluses
+* Or minuses
+* Or pluses
 
 <a name="links"/>
 
@@ -158,21 +145,15 @@ Some text to show that the reference links can follow later.
 
 [I'm an inline-style link](https://www.google.com)
 
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
+[I'm a reference-style link](https://www.mozilla.org)
 
-[You can use numbers for reference-style link definitions][1]
+[You can use numbers for reference-style link definitions](http://slashdot.org)
 
-Or leave it empty and use the [link text itself]
+Or leave it empty and use the [link text itself](http://www.reddit.com)
 
-URLs and URLs in angle brackets will automatically get turned into links.
-http://www.example.com or <http://www.example.com> and sometimes
-example.com (but not on Github, for example).
+URLs and URLs in angle brackets will automatically get turned into links. http://www.example.com or <http://www.example.com> and sometimes example.com (but not on Github, for example).
 
 Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
 
 <a name="images"/>
 
@@ -192,13 +173,9 @@ Reference-style:
 
 Here's our logo (hover to see the title text):
 
-Inline-style:
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+Inline-style: ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
-Reference-style:
-![alt text][logo]
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+Reference-style: ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2")
 
 <a name="code"/>
 
@@ -212,7 +189,7 @@ Inline `code` has `back-ticks around` it.
 
 Inline `code` has `back-ticks around` it.
 
-Blocks of code are either fenced by lines with three back-ticks <code>```</code>, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.
+Blocks of code are either fenced by lines with three back-ticks <code>`</code>, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.
 
 <pre lang="no-highlight"><code>```javascript
 var s = "JavaScript syntax highlighting";
@@ -229,8 +206,6 @@ No language indicated, so no syntax highlighting.
 But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
 ```
 </code></pre>
-
-
 
 ```javascript
 var s = "JavaScript syntax highlighting";
@@ -275,7 +250,7 @@ The outer pipes (|) are optional, and you don't need to make the raw Markdown li
 Colons can be used to align columns.
 
 | Tables        | Are           | Cool  |
-| ------------- | :-----------: | ----: |
+| ------------- | ------------- | ----- |
 | col 3 is      | right-aligned | $1600 |
 | col 2 is      | centered      | $12   |
 | zebra stripes | are neat      | $1    |
@@ -300,8 +275,7 @@ Quote break.
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
 ```
 
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
+> Blockquotes are very handy in email to emulate reply text. This line is part of the same quote.
 
 Quote break.
 
@@ -328,7 +302,7 @@ You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
   <dd>Is something people use sometimes.</dd>
 
   <dt>Markdown in HTML</dt>
-  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+  <dd>Does \*not\* work \*\*very\*\* well. Use HTML <em>tags</em>.</dd>
 </dl>
 
 <a name="hr"/>
@@ -353,15 +327,15 @@ Underscores
 
 Three or more...
 
----
+- - -
 
 Hyphens
 
-***
+- - -
 
 Asterisks
 
-___
+- - -
 
 Underscores
 
@@ -386,8 +360,7 @@ Here's a line for us to start with.
 
 This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
 
-This line is also begins a separate paragraph, but...
-This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+This line is also begins a separate paragraph, but... This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
 
 (Technical note: *Markdown Here* uses GFM line breaks, so there's no need to use MD's two-space line breaks.)
 
