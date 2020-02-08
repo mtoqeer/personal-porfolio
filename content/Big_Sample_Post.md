@@ -1,7 +1,7 @@
 ---
 title: Test Post Change
-date: '2018-03-01'
-cover: 5.jpg
+date: 2018-03-15T19:00:00.000Z
+cover: assets/logo.png
 slug: Big-Sample_Test
 category: moar
 tags:
