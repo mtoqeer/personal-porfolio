@@ -1,9 +1,8 @@
-const urljoin = require("url-join");
-const path = require("path");
-const config = require("./data/SiteConfig");
+const urljoin = require('url-join')
+const config = require('./data/SiteConfig')
 
 module.exports = {
-  pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
+  pathPrefix: config.pathPrefix === '' ? '/' : config.pathPrefix,
   siteMetadata: {
     siteUrl: urljoin(config.siteUrl, config.pathPrefix),
     rssMetadata: {
@@ -11,71 +10,77 @@ module.exports = {
       feed_url: urljoin(config.siteUrl, config.pathPrefix, config.siteRss),
       title: config.siteTitle,
       description: config.siteDescription,
-      image_url: `${urljoin(
-        config.siteUrl,
-        config.pathPrefix
-      )}/logos/logo-512.png`,
-      copyright: config.copyright
-    }
+      image_url: `${urljoin(config.siteUrl, config.pathPrefix)}/logos/logo-48.png`,
+    },
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-lodash",
+    'gatsby-plugin-sass',
+    'gatsby-plugin-react-helmet',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-plugin-netlify`,
       options: {
-        name: "assets",
-        path: `${__dirname}/static/`
-      }
+        headers: {
+          '/*.js': ['cache-control: public, max-age=31536000, immutable'],
+          '/*.css': ['cache-control: public, max-age=31536000, immutable'],
+          '/sw.js': ['cache-control: public, max-age=0, must-revalidate'],
+        },
+      },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "posts",
-        path: `${__dirname}/content/`
-      }
+        name: 'assets',
+        path: `${__dirname}/static/`,
+      },
     },
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/content/`,
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-relative-images`
-          },
-          {
-            resolve: "gatsby-remark-images",
+            resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 690
-            }
+              maxWidth: 850,
+            },
           },
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
           {
-            resolve: "gatsby-remark-responsive-iframe"
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: `100`,
+              maintainCase: false,
+              removeAccents: true,
+            },
           },
-          "gatsby-remark-copy-linked-files",
-          "gatsby-remark-autolink-headers",
-          "gatsby-remark-prismjs"
-        ]
-      }
+        ],
+      },
     },
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: config.googleAnalyticsID
-      }
+        trackingId: config.googleAnalyticsID,
+      },
     },
     {
-      resolve: "gatsby-plugin-nprogress",
+      resolve: 'gatsby-plugin-nprogress',
       options: {
-        color: config.themeColor
-      }
+        color: config.themeColor,
+      },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-catch-links",
-    "gatsby-plugin-twitter",
-    "gatsby-plugin-sitemap",
+    'gatsby-plugin-sharp',
+    `gatsby-transformer-sharp`,
+    'gatsby-plugin-catch-links',
+    'gatsby-plugin-sitemap',
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: config.siteTitle,
         short_name: config.siteTitleShort,
@@ -83,40 +88,29 @@ module.exports = {
         start_url: config.pathPrefix,
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
-        display: "minimal-ui",
+        display: 'minimal-ui',
         icons: [
           {
-            src: "/logos/logo-192.png",
-            sizes: "192x192",
-            type: "image/png"
+            src: '/logos/logo-48.png',
+            sizes: '48x48',
+            type: 'image/png',
           },
           {
-            src: "/logos/logo-512.png",
-            sizes: "512x512",
-            type: "image/png"
-          }
-        ]
-      }
-    },
-    "gatsby-plugin-offline",
-    {
-      resolve: "gatsby-plugin-netlify-cms",
-      options: {
-        modulePath: path.resolve("src/netlifycms/index.js"), // default: undefined
-        enableIdentityWidget: true,
-        publicPath: "admin",
-        htmlTitle: "Content Manager",
-        includeRobots: false
-      }
+            src: '/logos/logo-1024.png',
+            sizes: '1024x1024',
+            type: 'image/png',
+          },
+        ],
+      },
     },
     {
-      resolve: "gatsby-plugin-feed",
+      resolve: 'gatsby-plugin-feed',
       options: {
         setup(ref) {
-          const ret = ref.query.site.siteMetadata.rssMetadata;
-          ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-          ret.generator = "GatsbyJS Advanced Starter";
-          return ret;
+          const ret = ref.query.site.siteMetadata.rssMetadata
+          ret.allMarkdownRemark = ref.query.allMarkdownRemark
+          ret.generator = 'Tania Rascia'
+          return ret
         },
         query: `
         {
@@ -128,7 +122,6 @@ module.exports = {
                 title
                 description
                 image_url
-                copyright
               }
             }
           }
@@ -137,7 +130,7 @@ module.exports = {
         feeds: [
           {
             serialize(ctx) {
-              const { rssMetadata } = ctx.query.site.siteMetadata;
+              const { rssMetadata } = ctx.query.site.siteMetadata
               return ctx.query.allMarkdownRemark.edges.map(edge => ({
                 categories: edge.node.frontmatter.tags,
                 date: edge.node.fields.date,
@@ -146,20 +139,21 @@ module.exports = {
                 url: rssMetadata.site_url + edge.node.fields.slug,
                 guid: rssMetadata.site_url + edge.node.fields.slug,
                 custom_elements: [
-                  { "content:encoded": edge.node.html },
-                  { author: config.userEmail }
-                ]
-              }));
+                  { 'content:encoded': edge.node.html },
+                  { author: config.userEmail },
+                ],
+              }))
             },
             query: `
             {
               allMarkdownRemark(
                 limit: 1000,
                 sort: { order: DESC, fields: [fields___date] },
+                filter: { frontmatter: { template: { eq: "post" } } }
               ) {
                 edges {
                   node {
-                    excerpt
+                    excerpt(pruneLength: 180)
                     html
                     timeToRead
                     fields {
@@ -168,10 +162,10 @@ module.exports = {
                     }
                     frontmatter {
                       title
-                      cover
                       date
-                      category
+                      categories
                       tags
+                      template
                     }
                   }
                 }
@@ -179,10 +173,10 @@ module.exports = {
             }
           `,
             output: config.siteRss,
-            title: config.siteRssTitle
-          }
-        ]
-      }
-    }
-  ]
-};
+            title: 'Tania Rascia - RSS Feed',
+          },
+        ],
+      },
+    },
+  ],
+}

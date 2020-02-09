@@ -1,50 +1,40 @@
 const config = {
-  siteTitle: "Muhammad Toqeer Iqbal", // Site title.
-  siteTitleShort: "M Toqeer Iqbal", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: "Muhammad Toqeer Iqbal", // Alternative site title for SEO.
-  siteLogo: "/logos/logo-48.png", // Logo used for SEO and manifest.
-  siteUrl: "https://toqeeriqbal.com", // Domain of your website without pathPrefix.
-  pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: "A GatsbyJS stater with Advanced design in mind.", // Website description used for RSS feeds/meta description tag.
-  siteRss: "/rss.xml", // Path to the RSS file.
-  siteRssTitle: "Toqeer Iqbal RSS feed", // Title of the RSS feed
-  siteFBAppID: "1825356251115265", // FB Application ID for using app insights
-  googleAnalyticsID: "", // GA tracking ID.
-  disqusShortname: "ToqeerIqbal", // Disqus shortname.
-  dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
-  dateFormat: "DD/MM/YYYY", // Date format for display.
-  postsPerPage: 4, // Amount of posts displayed per listing page.
-  userName: "Toqeer Iqbal", // Username to display in the author segment.
-  userEmail: "toqeer.94@gmail.com", // Email used for RSS feed's author segment
-  userTwitter: "", // Optionally renders "Follow Me" in the UserInfo segment.
-  userLocation: "Islamabad, Pakistan", // User location to display in the author segment.
-  userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the author segment.
-  userDescription:
-    "I am Toqeer, MERN Stack Developer from Pakistan. I have over 5 years of experience in Web Development & this is ny personal website. ", // User description to display in the author segment.
-  // Links to social profiles/projects you want to display in the author segment/navigation bar.
-  userLinks: [
+  siteTitle: "Tania Rascia",
+  siteTitleShort: "Tania Rascia",
+  siteTitleAlt: "Tania Rascia",
+  siteLogo: "/logos/logo-1024.png",
+  siteUrl: "https://www.taniarascia.com",
+  repo: "https://github.com/taniarascia/taniarascia.com",
+  pathPrefix: "",
+  dateFromFormat: "YYYY-MM-DD",
+  dateFormat: "MMMM Do, YYYY",
+  siteDescription:
+    "Tania Rascia is a full stack software developer specializing in modern JavaScript.",
+  siteRss: "/rss.xml",
+  googleAnalyticsID: "",
+  postDefaultCategoryID: "Tech",
+  newsletter: "https://taniarascia.substack.com",
+  newsletterEmbed: "https://taniarascia.substack.com/embed",
+  userName: "Tania",
+  userEmail: "hello@taniarascia.com",
+  userTwitter: "taniarascia",
+  menuLinks: [
     {
-      label: "GitHub",
-      url: "https://github.com/mtoqeer",
-      iconClassName: "fa fa-github"
+      name: "About me",
+      link: "/me/"
     },
     {
-      label: "Facebook",
-      url: "https://web.facebook.com/toqeeri1",
-      iconClassName: "fa fa-facebook"
+      name: "Articles",
+      link: "/blog/"
     },
     {
-      label: "Email",
-      url: "mailto:toqeer.94@gmail.com",
-      iconClassName: "fa fa-envelope"
+      name: "Contact",
+      link: "/contact/"
     }
   ],
-  copyright: "Copyright © 2020. Toqeer Iqbal", // Copyright string for the footer of the website and RSS feed.
-  themeColor: "#c62828", // Used for setting manifest and progress theme colors.
-  backgroundColor: "#e0e0e0" // Used for setting manifest background color.
+  themeColor: "#3F80FF", // Used for setting manifest and progress theme colors.
+  backgroundColor: "#ffffff"
 };
-
-// Validate
 
 // Make sure pathPrefix is empty if not needed
 if (config.pathPrefix === "/") {
