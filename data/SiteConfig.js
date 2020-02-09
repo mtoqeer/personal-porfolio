@@ -11,7 +11,7 @@ const config = {
   siteDescription:
     "Toqeer Iqbal is a full stack website developer specializing in modern JavaScript.",
   siteRss: "/rss.xml",
-  googleAnalyticsID: "",
+  googleAnalyticsID: "UA-80152461-10",
   postDefaultCategoryID: "Tech",
   newsletter: "https://toqeer.substack.com",
   newsletterEmbed: "https://toqeer.substack.com/embed",
