@@ -5,6 +5,8 @@ import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+import Button from "react-bootstrap/Button";
 import "./listing.css";
 
 class Listing extends React.Component {
@@ -16,20 +18,41 @@ class Listing extends React.Component {
     const isLastPage = currentPageNum === pageCount;
 
     return (
-      <div className="container">
-        {!isFirstPage && <Link to={prevPage}>Previous</Link>}
-        {[...Array(pageCount)].map((_val, index) => {
-          const pageNum = index + 1;
-          return (
-            <Link
-              key={`listing-page-${pageNum}`}
-              to={pageNum === 1 ? "/" : `/${pageNum}/`}
-            >
-              {pageNum}
-            </Link>
-          );
-        })}
-        {!isLastPage && <Link to={nextPage}>Next</Link>}
+      <div className="">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              {!isFirstPage && (
+                <Link to={prevPage} className="page-link">
+                  Previous
+                </Link>
+              )}
+            </li>
+
+            {[...Array(pageCount)].map((_val, index) => {
+              const pageNum = index + 1;
+              return (
+                <li class="page-item">
+                  <Link
+                    className="page-link"
+                    key={`listing-page-${pageNum}`}
+                    to={pageNum === 1 ? "/" : `/${pageNum}/`}
+                  >
+                    {pageNum}
+                  </Link>
+                </li>
+              );
+            })}
+
+            <li class="page-item">
+              {!isLastPage && (
+                <Link to={nextPage} className="page-link">
+                  Next
+                </Link>
+              )}
+            </li>
+          </ul>
+        </nav>
       </div>
     );
   }
@@ -39,7 +62,7 @@ class Listing extends React.Component {
 
     return (
       <Layout>
-        <div className="listing-container mt-5">
+        <div className="container mt-5">
           <div className="posts-container">
             <Helmet title={config.siteTitle} />
             <SEO />

@@ -38,7 +38,6 @@ export default class PostTemplate extends React.Component {
             </div>
             <UserInfo config={config} />
             <Disqus postNode={postNode} />
-            <Footer config={config} />
           </div>
         </div>
       </Layout>

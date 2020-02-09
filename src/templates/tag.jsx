@@ -4,7 +4,6 @@ import { graphql } from "gatsby";
 import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
 import config from "../../data/SiteConfig";
-import Footer from "../components/Footer/Footer";
 
 export default class TagTemplate extends React.Component {
   render() {
@@ -12,10 +11,9 @@ export default class TagTemplate extends React.Component {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
       <Layout>
-        <div className="tag-container">
+        <div className="tag-container mt-5">
           <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
           <PostListing postEdges={postEdges} />
-          <Footer config={config} />
         </div>
       </Layout>
     );

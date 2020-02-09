@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import config from "../../data/SiteConfig";
+import Footer from "../components/Footer/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "react-bootstrap/Navbar";
 import "./index.css";
@@ -26,6 +27,7 @@ export default class MainLayout extends React.Component {
           </Navbar.Brand>
         </Navbar>
         {children}
+        <Footer config={config} />
       </div>
     );
   }
