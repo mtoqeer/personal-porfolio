@@ -4,13 +4,13 @@ import GitHubButton from "react-github-btn";
 import { graphql, Link } from "gatsby";
 import Layout from "../layout";
 import PostListing from "../components/PostListing";
-import ProjectListing from "../components/ProjectListing";
-import SimpleListing from "../components/SimpleListing";
+// import ProjectListing from "../components/ProjectListing";
+// import SimpleListing from "../components/SimpleListing";
 import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
-import projects from "../../data/projects";
-import speaking from "../../data/speaking";
-import podcasts from "../../data/podcasts";
+// import projects from "../../data/projects";
+// import speaking from "../../data/speaking";
+// import podcasts from "../../data/podcasts";
 import quotes from "../../data/quotes";
 import tania from "../../content/images/profile.jpg";
 
