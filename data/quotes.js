@@ -1,29 +1,29 @@
 export default [
   {
-    name: 'Craig',
-    quote: `It's no exaggeration to say that I
-  wouldn't currently have a job in development without this site. So thanks for
-  ruining my life, Tania.`,
+    name: "Chris - Upwork",
+    quote: `The work was completed very quickly, communication was great and I am very happy with the finished product. I couldn't have asked for more and the pricing was incredibly reasonable. Will very happily be using Toqeer again in the future.`
   },
   {
-    name: 'Lori',
-    quote: `Not to get too dramatic, but I find your site to be an unspeakably beautiful
-  lifeboat in an overwhelming sea of technical jargon and shite.`,
+    name: "Kinkabailo - Fiverr",
+    quote: `Needed a page create for my website with, to my mind at least, slightly complex features. Certainly beyond my ability. Great communication, put in the extra effort to get the page exactly as I wanted it and the code is very well marked up so I know what is going on.`
   },
   {
-    name: 'Evan',
-    quote: `You taught me more than any class could have and it took me a fraction of the time because of how clearly you write and teach.`,
+    name: "Anna - Fiverr",
+    quote: `Well done！Excellent service and happy cooperation!`
   },
   {
-    name: 'Zuzana',
-    quote: `I keep coming back to your website and I appreciate it more and more every time. The way you explain things just make sense!`,
+    name: "WesternBarber - Fiverr",
+    quote: `easy to work with and very quick and accurate! Will def have to work with again!
+
+`
   },
   {
-    name: 'P.P.',
-    quote: `You are the best tutor I have ever seen in my life. This tutorial is an excellent example of simplicity, clear explanations and detailed examples. I love every bit of your work. Never stop teaching, please.`,
+    name: "Maria Narvasa - Fiverr",
+    quote:
+      "This guy is outstanding! He's helpful and listens well to all comments, making sure he understood my request and delivered. I'm so happy I found him and I can't wait for work with him in all my future projects!"
   },
   {
-    name: 'Antony',
-    quote: 'Just wanted to thank you for your awesome tutorials. Glad you found your niche, teaching valuable skills to so many folks out there, instead of preparing fine meals for a select few.'
+    name: "Sean G - Upwork",
+    quote: `Muhammad was perfect. He really over-delivered and was great to work with. He met all deadlines, usually quite early and was patient with my questions/requests/changes. Wow! I will definitely use him again in the future when I need changes or updates.`
   }
-]
+];

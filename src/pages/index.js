@@ -30,26 +30,19 @@ export default class Index extends Component {
             <div className="elevator">
               <h1>{`Hey, I'm Toqeer`}</h1>
               <p>
-                I'm a full stack software developer creating{" "}
-                <a
-                  href="https://github.com/mtoqeer/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  open source
-                </a>{" "}
-                projects and <Link to="/blog">writing</Link> about modern
-                JavaScript, Node.js, and development.
+                I'm a full stack software developer creating projects and{" "}
+                <Link to="/blog">writing</Link> about modern JavaScript,
+                Node.js, and development.
               </p>
               <div className="social-buttons">
-                <a
+                {/* <a
                   className="patreon"
                   href="https://www.patreon.com/taniarascia"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Patreon
-                </a>
+                </a> */}
                 <GitHubButton
                   href="https://github.com/mtoqeer/"
                   data-size="large"
