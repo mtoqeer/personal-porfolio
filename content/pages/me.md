@@ -1,4 +1,4 @@
----
+<!-- ---
 title: About me
 slug: me
 template: page
@@ -100,4 +100,4 @@ A few sites I designed.
 
 ## Miscellaneous
 
-- Won 3rd place for [Personal Developer Blog of the Year 2019](https://hackernoon.com/personal-developer-blog-of-the-year-hacker-noon-noonies-awards-2019-hz2tu32ql)
+- Won 3rd place for [Personal Developer Blog of the Year 2019](https://hackernoon.com/personal-developer-blog-of-the-year-hacker-noon-noonies-awards-2019-hz2tu32ql) -->

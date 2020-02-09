@@ -1,4 +1,4 @@
----
+<!-- ---
 title: Contact
 slug: contact
 template: page
@@ -25,4 +25,4 @@ If you have any comments, ideas, critiques, or you just want to say hi, don't he
 - **Twitter**: [taniarascia](https://twitter.com/taniarascia)
 - **Patreon**: [taniarascia](https://patreon.com/taniarascia)
 - **Ko-Fi**: [taniarascia](https://ko-fi.com/taniarascia)
-- **Feed**: [RSS](https://www.taniarascia.com/rss.xml)
+- **Feed**: [RSS](https://www.taniarascia.com/rss.xml) -->

@@ -10,7 +10,7 @@ I build open-source projects and write about modern JavaScript, Node.js, design 
   <iframe
     width="480"
     height="350"
-    src="https://taniarascia.substack.com/embed"
+    src="https://toqeer.substack.com/embed"
     frameborder="0"
     scrolling="no"
   ></iframe>
