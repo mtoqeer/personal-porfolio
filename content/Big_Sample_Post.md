@@ -1,12 +1,10 @@
 ---
-title: Test Post Change
-date: 2018-03-15T19:00:00.000Z
+title: '12 Best Hostels in Bali [Feb 2020]'
+date: 2018-03-07T19:00:00.000Z
 cover: assets/logo.png
-slug: Big-Sample_Test
-category: moar
+slug: best-hostels-in-bali-indonesia
+category: 'Best Hostels, Bali, Indonesia'
 tags:
-  - test
-  - huge
+  - Bali
 ---
-
-This is intended as a quick reference and showcase. For more complete info, see [John Gruber's original spec](http://daringfireball.net/projects/markdown/) and the [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).
+This is a sample post.
