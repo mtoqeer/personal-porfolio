@@ -1,25 +1,25 @@
-import React, { Component } from 'react'
-import Helmet from 'react-helmet'
-import GitHubButton from 'react-github-btn'
-import { graphql, Link } from 'gatsby'
-import Layout from '../layout'
-import PostListing from '../components/PostListing'
-import ProjectListing from '../components/ProjectListing'
-import SimpleListing from '../components/SimpleListing'
-import SEO from '../components/SEO'
-import config from '../../data/SiteConfig'
-import projects from '../../data/projects'
-import speaking from '../../data/speaking'
-import podcasts from '../../data/podcasts'
-import quotes from '../../data/quotes'
-import tania from '../../content/images/profile.jpg'
+import React, { Component } from "react";
+import Helmet from "react-helmet";
+import GitHubButton from "react-github-btn";
+import { graphql, Link } from "gatsby";
+import Layout from "../layout";
+import PostListing from "../components/PostListing";
+import ProjectListing from "../components/ProjectListing";
+import SimpleListing from "../components/SimpleListing";
+import SEO from "../components/SEO";
+import config from "../../data/SiteConfig";
+import projects from "../../data/projects";
+import speaking from "../../data/speaking";
+import podcasts from "../../data/podcasts";
+import quotes from "../../data/quotes";
+import tania from "../../content/images/profile.jpg";
 
 export default class Index extends Component {
   render() {
-    const { data } = this.props
+    const { data } = this.props;
 
-    const latestPostEdges = data.latest.edges
-    const popularPostEdges = data.popular.edges
+    const latestPostEdges = data.latest.edges;
+    const popularPostEdges = data.popular.edges;
 
     return (
       <Layout>
@@ -28,14 +28,18 @@ export default class Index extends Component {
         <div className="container">
           <div className="lead">
             <div className="elevator">
-              <h1>{`Hey, I'm Tania`}</h1>
+              <h1>{`Hey, I'm Toqeer`}</h1>
               <p>
-                I'm a full stack software developer creating{' '}
-                <a href="https://github.com/taniarascia" target="_blank" rel="noopener noreferrer">
+                I'm a full stack software developer creating{" "}
+                <a
+                  href="https://github.com/mtoqeer/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   open source
-                </a>{' '}
-                projects and <Link to="/blog">writing</Link> about modern JavaScript, Node.js, and
-                development.
+                </a>{" "}
+                projects and <Link to="/blog">writing</Link> about modern
+                JavaScript, Node.js, and development.
               </p>
               <div className="social-buttons">
                 <a
@@ -47,11 +51,11 @@ export default class Index extends Component {
                   Patreon
                 </a>
                 <GitHubButton
-                  href="https://github.com/taniarascia"
+                  href="https://github.com/mtoqeer/"
                   data-size="large"
                   data-show-count="true"
                 >
-                  taniarascia
+                  mtoqeer
                 </GitHubButton>
               </div>
             </div>
@@ -60,9 +64,10 @@ export default class Index extends Component {
               <div>
                 <h3>Email Newsletter</h3>
                 <p>
-                  I write tutorials. Get an update when something new comes out by signing up below!
+                  I write tutorials. Get an update when something new comes out
+                  by signing up below!
                 </p>
-                <a className="button" href="https://taniarascia.substack.com">
+                <a className="button" href="https://toqeer.substack.com">
                   Subscribe
                 </a>
               </div>
@@ -90,7 +95,7 @@ export default class Index extends Component {
             </h2>
             <PostListing simple postEdges={popularPostEdges} />
           </section>
-
+          {/* 
           <section className="section">
             <h2>Open Source Projects</h2>
             <ProjectListing projects={projects} />
@@ -99,12 +104,12 @@ export default class Index extends Component {
           <section className="section">
             <h2>Interviews</h2>
             <SimpleListing simple data={podcasts} />
-          </section>
+          </section> */}
 
-          <section className="section">
+          {/* <section className="section">
             <h2>Talks</h2>
             <SimpleListing simple data={speaking} />
-          </section>
+          </section> */}
 
           <section className="section">
             <h2>{`Other People's Opinions`}</h2>
@@ -119,7 +124,7 @@ export default class Index extends Component {
           </section>
         </div>
       </Layout>
-    )
+    );
   }
 }
 
@@ -186,4 +191,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
