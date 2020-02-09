@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class NewsletterForm extends Component {
   render() {
@@ -7,11 +7,11 @@ export default class NewsletterForm extends Component {
         <iframe
           width="480"
           height="150"
-          src="https://taniarascia.substack.com/embed"
+          src="https://toqeer.substack.com/embed"
           frameborder="0"
           scrolling="no"
         ></iframe>
       </div>
-    )
+    );
   }
 }
