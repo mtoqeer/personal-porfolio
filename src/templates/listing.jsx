@@ -5,8 +5,6 @@ import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
-import Button from "react-bootstrap/Button";
 import "./listing.css";
 
 class Listing extends React.Component {
@@ -62,7 +60,7 @@ class Listing extends React.Component {
 
     return (
       <Layout>
-        <div className="container mt-5">
+        <div className="container mt-3">
           <div className="posts-container">
             <Helmet title={config.siteTitle} />
             <SEO />

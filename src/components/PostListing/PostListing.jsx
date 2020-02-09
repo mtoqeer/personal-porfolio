@@ -23,7 +23,7 @@ class PostListing extends React.Component {
     return (
       <div className="container">
         {postList.map(post => (
-          <div className="shadow-lg p-4 mb-3 bg-white rounded">
+          <div className="shadow p-4 mb-3 bg-white rounded">
             <Link to={post.path} key={post.title}>
               <h1>{post.title}</h1>
             </Link>

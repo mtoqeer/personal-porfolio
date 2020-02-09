@@ -15,7 +15,7 @@ export default class MainLayout extends React.Component {
           <meta name="description" content={config.siteDescription} />
           <html lang="en" />
         </Helmet>
-        <Navbar bg="light">
+        <Navbar bg="white" className="shadow rounded">
           <Navbar.Brand href="/">
             <img
               src={config.siteLogo}

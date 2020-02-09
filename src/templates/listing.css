@@ -14,3 +14,7 @@
   display: flex;
   justify-content: space-between;
 }
+
+.posts-container {
+  min-height: 500px;
+}
