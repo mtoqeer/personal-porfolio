@@ -1,18 +1,14 @@
 ---
-date: 2015-10-02
+date: 2019-10-02
 author: "Toqeer Iqbal"
-title: "Responsive Dropdown Navigation Bar"
+title: "Sample First Post"
 template: post
-thumbnail: "../thumbnails/css.png"
+thumbnail: "../thumbnails/js.png"
 slug: responsive-dropdown-navigation-bar
 categories:
   - Popular
-  - Design
 tags:
-  - css
-  - jQuery
-  - navigation
-  - sass
+  - Sample First Post
 ---
 
 Sample Post
