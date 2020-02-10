@@ -61,7 +61,7 @@ export default class PostTemplate extends Component {
             <div className="flex">
               <h1>{post.title}</h1>
               <div className="post-meta">
-                <time className="date">{date}</time>/
+                <time className="date">{date}</time>/ By {post.author} /
                 <a
                   className="twitter-link"
                   href={twitterShare}
@@ -113,6 +113,7 @@ export const pageQuery = graphql`
         }
         slug
         date
+        author
         categories
         tags
         template
