@@ -65,9 +65,12 @@ export default class SEO extends Component {
           name: title,
           alternateName: config.siteTitleAlt ? config.siteTitleAlt : "",
           headline: title,
+          author: {
+            "@type": "Person",
+            name: author
+          },
           image: {
             "@type": "ImageObject",
-            "@author": author,
             url: image
           },
           description
