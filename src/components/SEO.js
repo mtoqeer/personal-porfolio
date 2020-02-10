@@ -8,6 +8,7 @@ export default class SEO extends Component {
     const replacePath = path => (path === `/` ? path : path.replace(/\/$/, ``));
     const { postNode, postPath, postSEO } = this.props;
     let title;
+    let author;
     let description;
     let image = "";
     let postURL;
