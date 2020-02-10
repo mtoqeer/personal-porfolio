@@ -1,5 +1,6 @@
 ---
 date: 2015-10-02
+author: "Toqeer Iqbal"
 title: "Responsive Dropdown Navigation Bar"
 template: post
 thumbnail: "../thumbnails/css.png"
