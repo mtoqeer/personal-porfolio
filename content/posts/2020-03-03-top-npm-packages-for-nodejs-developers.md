@@ -7,8 +7,7 @@ thumbnail: "../thumbnails/npm.png"
 slug: top-npm-packages-for-nodejs-developers
 categories:
   - Popular
-  - Node.js
-  - NPM Packages
+  - Nodejs
 tags:
   - Node.Js
   - NPM Packages
