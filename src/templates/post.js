@@ -42,6 +42,7 @@ export default class PostTemplate extends Component {
     }
 
     const date = formatDate(post.date);
+    const lastmodified = formatDate(post.lastmodified);
     const githubLink = editOnGithub(post);
     const twitterShare = `http://twitter.com/share?text=${encodeURIComponent(
       post.title
@@ -61,7 +62,8 @@ export default class PostTemplate extends Component {
             <div className="flex">
               <h1>{post.title}</h1>
               <div className="post-meta">
-                <time className="date">{date}</time>/ By {post.author} /
+                <time className="date">{`Updated On ${lastmodified}`}</time>/ By{" "}
+                {post.author} /
                 <a
                   className="twitter-link"
                   href={twitterShare}
